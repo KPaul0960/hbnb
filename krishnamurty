@@ -1,0 +1,29 @@
+import java.util.*;
+
+
+ class Krishnamurty
+ {
+   public static void main(String args[])
+   { 
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter number:");
+    int n=Integer.parseInt(sc.next());
+    int num=n,s=0;
+
+      while(n!=0){
+        int f=1;
+        
+      for(int i=1;i<n%10;i++,f*=i)
+      System.out.println(i+" "+f); //factorial code.
+      
+      n/=10;
+      System.out.println("N:"+s+"f"+f);
+      s=s+f;
+      System.out.println("T:"+s);
+    }
+    if(s==num)
+    System.out.println("Krishnamurty");
+    else
+    System.out.println("Not Krishnamurty");
+   }
+ }
